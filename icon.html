@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Icon</title>
+    <style>
+        body {
+            background-color: transparent;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .icon-container {
+            /* Responsive Sizing: 80% of the smallest viewport dimension */
+            width: 80vmin;
+            height: 80vmin;
+
+            /* Jazz Theme: Deep Blue to Purple with Gold Accents */
+            background: linear-gradient(135deg, #19192D 0%, #2D2D4B 100%);
+            border-radius: 20vmin;
+            /* Responsive Border Radius */
+
+            box-shadow: 0 4vmin 10vmin rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1.5vmin #FFD700,
+                /* Responsive Border */
+                inset 0 1.5vmin 4vmin rgba(255, 215, 0, 0.3);
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 6vmin;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Gold Grid Lines */
+        .icon-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 6vmin;
+            right: 6vmin;
+            height: 0.8vmin;
+            background: rgba(255, 215, 0, 0.5);
+            /* Gold */
+            transform: translateY(-50%);
+        }
+
+        .icon-container::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 6vmin;
+            bottom: 6vmin;
+            width: 0.8vmin;
+            background: rgba(255, 215, 0, 0.5);
+            /* Gold */
+            transform: translateX(-50%);
+        }
+
+        .symbol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Century Gothic', 'Segoe UI', sans-serif;
+            font-weight: bold;
+            font-size: 25vmin;
+            /* Responsive Font Size */
+            color: #FFD700;
+            /* Gold Text */
+            text-shadow: 0 0.8vmin 4vmin rgba(255, 215, 0, 0.4);
+            /* Prevent text selection cursor */
+            user-select: none;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon-container">
+        <div class="symbol">+</div>
+        <div class="symbol">−</div>
+        <div class="symbol">×</div>
+        <div class="symbol">=</div>
+    </div>
+</body>
+
+</html>
